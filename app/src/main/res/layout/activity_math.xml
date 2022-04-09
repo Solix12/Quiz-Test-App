@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".MathActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:id="@+id/finish_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/exit_backgraund"
+            android:padding="10dp"
+            android:src="@drawable/ic_exit_icon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:orientation="horizontal"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/basic"
+                android:text="@string/question"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/current_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/basic"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/basic"
+                android:text="/"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/total_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/basic"
+                android:text="5"
+                android:textColor="#fff"
+
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/seekbar_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:progressDrawable="@drawable/seekbar_backgraund"
+            android:thumb="@color/orange" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.2"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="#fff"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.6">
+
+                        <TextView
+                            android:id="@+id/question_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/basic"
+                            android:padding="20dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="20sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="3. Uch xonali natural son bilan ikki xonali natural sonning yig`indisi eng kamida nechaga teng bo`ladi? " />
+
+                    </ScrollView>
+
+                    <RadioGroup
+                        android:id="@+id/question_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3.5"
+                        android:paddingStart="30dp"
+                        android:paddingTop="30dp"
+                        android:paddingEnd="30dp"
+                        android:weightSum="4">
+
+                        <RadioButton
+                            android:id="@+id/variantA"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/variant"
+                            android:button="@null"
+                            android:paddingStart="20dp"
+                            android:text="Variant A"
+                            android:textColor="@color/colorText" />
+
+                        <RadioButton
+                            android:id="@+id/variantB"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/variant"
+                            android:button="@null"
+                            android:paddingStart="20dp"
+                            android:text="Variant B "
+                            android:textColor="#8DA1B5" />
+
+                        <RadioButton
+                            android:id="@+id/variantC"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/variant"
+                            android:button="@null"
+                            android:paddingStart="20dp"
+                            android:text="Variant C"
+                            android:textColor="#8DA1B5" />
+
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/check_view"
+                        android:layout_width="140dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="bottom|end"
+                        android:background="@drawable/next_backgraund">
+
+                        <TextView
+                            android:id="@+id/check_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/basic"
+                            android:gravity="center"
+                            android:text="Check"
+                            android:textColor="#fff"
+                            android:textSize="24sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:background="@drawable/quetion_list2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/quations_list" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

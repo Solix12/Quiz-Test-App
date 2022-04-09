@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="salihkToast">
+        <item name="stColorBackground">@color/backcolor</item>
+        <item name="stTextColor">#fff</item>
+        <item name="stIconStart">@drawable/ic_baseline_warning_24</item>
+    </style>
+
+    <style name="salihkToast2">
+        <item name="stColorBackground">@color/orange</item>
+        <item name="stTextColor">#fff</item>
+        <item name="stIconStart">@drawable/ic_baseline_warning_24</item>
+    </style>
+
+</resources>
